@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #f0a500;
+}
+
+.toggle-button {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.close-button {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+.toggle-button {
+    display: block;
+}
+
+.toggle-button.active {
+    display: none;
+}
+
+.close-button.active {
+    display: block;
+}
+
+.navbar-links {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 5rem;
+    background-color: #333;
+}
+
+.navbar-links.active {
+    display: flex;
+}
+
+.navbar-links a {
+    padding: 0.5rem 0;
+}
+}
+
+/* CARDS */
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
